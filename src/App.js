@@ -20,7 +20,7 @@ function App() {
               <Link to="/checkout">
                 <span  role="img">
                   
-                </span>{' '}
+                </span>{''}
                 Checkout
               </Link>
             </li>
