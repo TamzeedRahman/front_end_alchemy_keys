@@ -4,9 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+
+export const stripePromise = loadStripe(
+  'pk_live_51KZITtL5UxYgXGvL54bja7YGTEZEayi2qzO8Lt8ifh3wZtbT2WuRGjIMJ5pkgsDkkgr2xgwcZKl7CqTgWjR20Fo800LulekYCa'
+);
+
+// ^ This is the public key for the test environment
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Elements stripe={stripePromise}>
+        <App />
+    </Elements>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+import { Checkout, CheckoutSuccess, CheckoutFail } from './Checkout';
+import Payments from './Payments';
+import Customers from './Customers';
+
 
 function App() {
   return (
@@ -19,6 +25,14 @@ function App() {
         </a>
       </header>
     </div>
+  );
+}
+
+function Home() {
+  return (
+    <>
+      <h2>Stripe React + Node.js</h2>
+    </>
   );
 }
 
