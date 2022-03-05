@@ -9,29 +9,63 @@ import Customers from './Customers';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul className="navbar-nav">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/checkout">
+                <span  role="img">
+                  
+                </span>{' '}
+                Checkout
+              </Link>
+            </li>
+            <li>
+              <Link to="/payments">
+                <span role="img">
+                  
+                </span>{' '}
+                Payments
+              </Link>
+            </li>
+            <li>
+              <Link to="/customers">
+                <span  role="img">
+                  
+                </span>{' '}
+                Customers
+              </Link>
+            </li>
+            <li>
+              <Link to="/subscriptions">
+                <span  role="img">
+                  
+                </span>{' '}
+               possible Subscriptions 
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+        <main>
+          <Switch>
+          
+          
+          </Switch>
+        </main>
+      </div>
+    </Router>
   );
 }
 
 function Home() {
   return (
     <>
-      <h2>Stripe Server Alchemy Key Front End React + Node.js + Test + WebHook </h2>
+      <h2>Stripe React + Node.js</h2>
     </>
   );
 }
