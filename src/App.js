@@ -53,7 +53,28 @@ function App() {
 
         <main>
           <Switch>
-          
+          {/*organize routes and paths with*/}
+          <Route path="/checkout">
+              <Checkout />
+            </Route>
+            <Route path="/payments">
+              <Payments />
+            </Route>
+            <Route path="/customers">
+              <Customers />
+            </Route>
+            <Route path="/subscriptions">
+              <Subscriptions />
+            </Route>
+            <Route path="/success">
+              <CheckoutSuccess />
+            </Route>
+            <Route path="/failed">
+              <CheckoutFail />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
           
           </Switch>
         </main>
