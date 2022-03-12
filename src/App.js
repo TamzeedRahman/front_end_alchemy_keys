@@ -75,7 +75,7 @@ function App() {
             <Route path="/">
               <Home />
             </Route>
-          
+          error basis
           </Switch>
         </main>
       </div>
